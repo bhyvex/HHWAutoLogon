@@ -35,4 +35,4 @@ I got bored of manually loading up our apartment's Wifi provider's 192.x.x.x pag
 3. Update as appropriate - Logging level `logging.basicConfig(format='%(message)s',level=logging.INFO)`, e.g. level=logging.DEBUG / WARNING , etc.
 4. Run: 
    * Foreground: `python HHWAutoLogon.py` 
-   * Background: `nohup python HHWAutoLogon.py &; disown;`
+   * Background: `nohup python HHWAutoLogon.py &; disown;`(you'll need to fill in the username/password somehow)
