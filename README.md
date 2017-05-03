@@ -1,2 +1,2 @@
-# hallelujah_hotel_wifi_autologon
-Hallelujah! The background script to automate the log on to hotel / apartment wifi networks that uses a login web page. Typically for unsecured (non-WEP/WPA/WPA2) connections that use the irritating "splash" screen login prompt where the "remember me" checkbox is borked.
+# hallelujah_hotel_wifi_autologon (HHWAutoLogon)
+To automate log on to hotel / apartment wifi networks that uses a login web page. Typically for unsecured (non-WEP/WPA/WPA2) connections that use the crappy "splash" screen login prompt where the "remember me" checkbox is borked. Linux only - forks and pulls welcome.
