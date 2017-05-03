@@ -36,7 +36,7 @@ class App(object):
     wireless_access_point_names = ['linksys806B', 'linksys 711B', 'linksys']
     login_page = "http://192.168.100.1:3990/prelogin"
     login_form_root = "http://192.168.100.1/uam/"
-    username = "***REMOVED***"
+    username = ""
     password = ""
     is_at_apartment_max_tries = 3
     is_at_apartment_max_value = 5
@@ -137,8 +137,8 @@ class IssueHTTPRequests_Dryscrape():
                     #    <input name="rememberme" type="checkbox" value="1"/>
                     #    <input class="stylebutton" id="login" name="login" onclick="javascript:ProtectNetwork('192.168.100.1', '54-04-A6-2B-09-FD', '192.168.101.110', 'C4-85-08-1A-6A-B2')" type="submit" value="Login"/>
             # Example login url:
-            # -- http://192.168.100.1/uam/hotspotlogin.php?uamip=192.168.100.1&uamport=3990&challenge=06de9988e1df1ec009eebb1e2e2e9ff9&redirurl=&nasid=nas01&ip=192.168.101.110&mac=C4-85-08-1A-6A-B2&username=***REMOVED***&password=***REMOVED***&rememberme=1&login=Login
-            # -- http://192.168.100.1/uam/?username=***REMOVED***&password=***REMOVED***&rememberme=1&ip=192.168.101.110&challenge=49a2f4d9aca525d74aaed01109201672&uamip=192.168.100.1&mac=C4-85-08-1A-6A-B2&uamport=3990&login=Login&redirurl=&nasid=nas01
+            # -- http://192.168.100.1/uam/hotspotlogin.php?uamip=192.168.100.1&uamport=3990&challenge=06de9988e1df1ec009eebb1e2e2e9ff9&redirurl=&nasid=nas01&ip=192.168.101.110&mac=C4-85-08-1A-6A-B2&username=xxxxx&password=xxxxx&rememberme=1&login=Login
+            # -- http://192.168.100.1/uam/?username=xxxxxxx&password=xxxx&rememberme=1&ip=192.168.101.110&challenge=49a2f4d9aca525d74aaed01109201672&uamip=192.168.100.1&mac=C4-85-08-1A-6A-B2&uamport=3990&login=Login&redirurl=&nasid=nas01
 
             field_dict["username"] = App.username
             field_dict["password"] = App.password
