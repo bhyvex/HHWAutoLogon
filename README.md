@@ -29,10 +29,10 @@ I got bored of manually loading up our apartment's Wifi provider's 192.x.x.x pag
 
 ## How to use:
 1. Update as appropriate - `App` configuration class, with SSID names, username, password, login URL, etc.
-2. Update as appropriate - `IssueHTTPRequests_Dryscrape` class. Two methods:
-   * collect to login page form and 
-   * issue the form data and wait for page load.
+2. Update as appropriate - `IssueHTTPRequests_Dryscrape` class. A good solution here is to subclass `IssueHTTPRequests_Dryscrape` and override the two methods that:
+   * collect to login page form and fill in the username / password
+   * send the form data and wait for confirmation page load.
 3. Update as appropriate - Logging level `logging.basicConfig(format='%(message)s',level=logging.INFO)`, e.g. level=logging.DEBUG / WARNING , etc.
 4. Run: 
    * Foreground: `python HHWAutoLogon.py` 
-   * Background: `nohup python HHWAutoLogon.py &; disown;`
+   * Background: `nohup python HHWAutoLogon.py &; disown;`(you'll need to fill in the username/password somehow)
