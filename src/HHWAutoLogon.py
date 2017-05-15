@@ -76,6 +76,7 @@ class DoConnect(object):
                     logging.error("Unable to connect to login page, despite being connected to hotspot..")
             else:
                 print "connected"
+                time.sleep(15)
             time.sleep(1)
             if self.term.kill_now:
                 break
