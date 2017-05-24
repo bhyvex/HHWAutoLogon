@@ -28,11 +28,19 @@ I got bored of manually loading up our apartment's Wifi provider's 192.x.x.x pag
 * `sudo pip install wireless requests beautifulsoup4 dryscrape urllib backoff`
 
 ## How to use:
-1. Update as appropriate - `App` configuration class, with SSID names, username, password, login URL, etc.
-2. Update as appropriate - `IssueHTTPRequests_Dryscrape` class. A good solution here is to subclass `IssueHTTPRequests_Dryscrape` and override the two methods that:
+1. Update as appropriate - `src/config.py` -> `App` configuration class, with:
+   * SSID names
+   * login URL, etc.
+   * username
+   * password *(optional, enter when program runs instead.)*
+2. Run:
+   * Foreground: `python HHWAutoLogon.py` 
+   * Background: `nohup python HHWAutoLogon.py &; disown;` *(you'll need to fill in the username/password somehow)*
+
+
+##### Add a new Hotspot Profile:
+1. Create a new profile: - `src/hotspot_profiles/` -> `Profile` implementation class. Subclass `Profile_ABC` and override the two methods that:
    * collect to login page form and fill in the username / password
    * send the form data and wait for confirmation page load.
-3. Update as appropriate - Logging level `logging.basicConfig(format='%(message)s',level=logging.INFO)`, e.g. level=logging.DEBUG / WARNING , etc.
-4. Run: 
-   * Foreground: `python HHWAutoLogon.py` 
-   * Background: `nohup python HHWAutoLogon.py &; disown;`(you'll need to fill in the username/password somehow)
+2. Use the new Profile: - In `__main__` in `src/HHWAutoLogon.py`, instantiate the new profile and pass into `DoConnect`.
+3. As required, update logging level `logging.basicConfig(format='%(message)s',level=logging.INFO)`, e.g. level=logging.DEBUG / WARNING , etc.
